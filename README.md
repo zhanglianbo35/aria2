@@ -67,9 +67,8 @@ EOT'
 sudo chmod 755 /etc/init.d/aria2c  
 
 ## 测试Aria2服务是否可以正常启动：  
-### 如果只显示“开启Aria2c”，没有其他错误提示的话就说明成功了。  
 sudo service aria2c start  
-
+### *如果只显示“开启Aria2c”，没有其他错误提示的话就说明成功了。*  
 
 ## 添加Aria2c服务到开机启动  
 sudo update-rc.d aria2c defaults  
