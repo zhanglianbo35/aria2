@@ -52,7 +52,7 @@ sudo aria2c --conf-path=/etc/aria2/aria2.conf -D
 
 # 把aria2做成服务启动  
 ```bash
-sudo -u ${HOME##*\/} bash -c 'cat <<EOT >  /etc/init.d/aria2c  
+sudo bash -c 'cat <<EOT >  /etc/init.d/aria2c  
 #!/bin/sh  
 ###BEGIN INIT INFO  
 #Provides: aria2  
@@ -67,7 +67,7 @@ sudo -u ${HOME##*\/} bash -c 'cat <<EOT >  /etc/init.d/aria2c
 case "$1" in  
 start)  
  echo -n "已开启Aria2c"  
- sudo -u ${HOME##*\/} aria2c --conf-path=/etc/aria2/aria2.conf -D  
+ sudo -u \${HOME##*\/} aria2c --conf-path=/etc/aria2/aria2.conf -D  
 ;;  
 
 stop)  
@@ -77,7 +77,7 @@ stop)
 
 restart)  
  killall aria2c  
- sudo -u ${HOME##*\/} aria2c --conf-path=/etc/aria2/aria2.conf -D  
+ sudo -u \${HOME##*\/} aria2c --conf-path=/etc/aria2/aria2.conf -D  
 ;;  
 
 esac  
