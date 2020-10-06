@@ -64,7 +64,7 @@ sudo bash -c 'cat <<EOT >  /etc/init.d/aria2c
 ###END INIT INFO  
 
 
-case "$1" in  
+case "\$1" in  
 start)  
  echo -n "已开启Aria2c"  
  sudo -u \${HOME##*\/} aria2c --conf-path=/etc/aria2/aria2.conf -D  
