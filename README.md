@@ -19,9 +19,11 @@ sudo chmod 777 /etc/aria2/aria2.session    #权限设置aria2.session可读写�
 ## 将自定义配置信息写入配置文件 /etc/aria2/aria2.conf   
 ```bash
 sudo -u ${HOME##*\/} bash -c 'cat <<EOT > /etc/aria2/aria2.conf  
-dir=${HOME}/Downloads   #＝＝文件保存目录自行修改，请使用绝对路径  
+#＝＝文件保存目录自行修改，请使用绝对路径  
+dir=${HOME}/Downloads     
 disable-ipv6=true 
-enable-rpc=true   #打开rpc的目的是为了给web管理端用  
+#打开rpc的目的是为了给web管理端用  
+enable-rpc=true   
 rpc-allow-origin-all=true  
 rpc-listen-all=true  
 #rpc-listen-port=6800  
